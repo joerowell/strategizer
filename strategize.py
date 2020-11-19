@@ -127,6 +127,8 @@ def discover_strategy(block_size, Strategizer, strategies, jobs=1, nsamples=50, 
 
     strategizer = Strategizer(block_size)
 
+    # Set this here for happier outcomes
+    FPLLL.set_threads(threads)
     # everybody is alive in the beginning
     alive = range(m)
 
